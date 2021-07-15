@@ -1,0 +1,182 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --titles: #2c3e50;
+  --texts: #6a6a6a;
+  --background: #2ecc71;
+  --conversorBg: #27ae60;
+  --conversorBorderColor: #d35400;
+}
+
+.dark-mode {
+  --titles: #2ecc71;
+  --texts: #1a8246;
+  --background: #2c3e50;
+  --conversorBg: #34495e;
+  --conversorBorderColor: #8e44ad;
+}
+
+::-moz-selection {
+  background: var(--titles);
+  color: var(--background);
+}
+
+::selection {
+  background: var(--titles);
+  color: var(--background);
+}
+
+#app {
+  max-width: 400px;
+  height: 400px;
+  background-color: var(--background);
+  color: var(--titles);
+  font-family: "Kulim Park", sans-serif, helvetica;
+  padding: .25rem 1rem .25rem 1rem;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .c-header-title {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+header .c-changeMode {
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 3.275);
+  transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 3.275);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  max-height: 1.2rem;
+}
+
+header .c-changeMode:hover {
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+  -webkit-transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 3.275);
+  transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 3.275);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .question-section {
+  width: 80%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main .converter-section {
+  height: 60%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--conversorBg);
+  border-radius: .30rem;
+  padding: 0 .5rem 0 .5rem;
+  border: 2px solid var(--conversorBorderColor);
+  -webkit-box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.c-question-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: .25 0 .25rem 0;
+}
+
+.c-question-description {
+  font-size: 1.2rem;
+  color: var(--texts);
+}
+
+.input-section {
+  width: 100%;
+}
+
+.c-converter-label {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.c-converter-field {
+  width: 80%;
+  margin-top: .75rem;
+  border-radius: .25rem;
+  border: none;
+  padding: .25rem;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+       appearance: textfield;
+}
+
+.c-converter-result {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.c-copyBtn {
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--titles);
+  -webkit-transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 3.275);
+  transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 3.275);
+}
+
+.c-copyBtn:hover {
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 3.275);
+  transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 3.275);
+}
+/*# sourceMappingURL=style.css.map */

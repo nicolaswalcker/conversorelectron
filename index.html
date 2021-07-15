@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <!--Import fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Pixels converter to REM</title>
+  </head>
+  <body>
+    <div :class="darkModeClass" id="app">
+      <header>
+        <img
+          v-on:click="switchMode"
+          class="c-changeMode"
+          v-bind:src="imgSrc"
+          alt=""
+        />
+        <h1 class="c-header-title">Pixels converter to REM</h1>
+      </header>
+      <main class="l-main">
+        <section class="question-section">
+          <h3 class="c-question-title">Why use rem instead of pixels?</h3>
+          <p class="c-question-description">
+            Because rem is a relational unit, that is, it adapts to the size of
+            the screen it is on.
+          </p>
+        </section>
+
+        <section class="converter-section">
+          <div class="input-section">
+            <label class="c-converter-label" for="c-converter-field"
+              >Pixels to convert:</label
+            >
+            <input
+              type="tel"
+              name="c-converter-field"
+              class="c-converter-field"
+              maxlength="5"
+              placeholder="Insira o valor"
+              v-model="convertedNumber"
+            />
+            <span>px</span>
+          </div>
+          <h2 class="c-converter-result" id="c-converter-result">
+            {{ convertedNumber / 16}}rem
+          </h2>
+          <button data-clipboard-target=".c-converter-result" class="c-copyBtn">
+            <i class="fas fa-copy"></i>
+          </button>
+        </section>
+      </main>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
