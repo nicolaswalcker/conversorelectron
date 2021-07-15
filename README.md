@@ -51,7 +51,7 @@ I made this project for practice some elements of Vue.js, Sass and Electron.
 
 ## :sparkles: Features
 
-:heavy_check_mark: Convert pixels to rem;/
+:heavy_check_mark: Convert pixels to rem;#
 :heavy_check_mark: Light and Dark mode;
 
 ## :rocket: Technologies
